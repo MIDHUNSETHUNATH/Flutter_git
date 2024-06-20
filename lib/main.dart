@@ -1,13 +1,14 @@
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:taxi_app/openpage.dart';
-import 'package:taxi_app/verification.dart';
-import 'phoneauth.dart'; // Ensure this import points to your PhoneAuth file
+
+import 'package:taxi_app/UI/verification.dart';
+import 'package:taxi_app/maplog/map.dart';
+
 
 void main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Pin (verificationId: '',),
+      home: const MapPage(),
     );
   }
 }

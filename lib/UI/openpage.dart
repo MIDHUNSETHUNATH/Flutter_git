@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_app/phoneauth.dart';
+import 'package:taxi_app/UI/phoneauth.dart';
 
 
 class OpenScreen extends StatefulWidget {

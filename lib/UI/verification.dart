@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
 import 'package:pinput/pinput.dart';
-import 'package:taxi_app/phoneauth.dart';
+import 'package:taxi_app/UI/phoneauth.dart';
 
 class Pin extends StatefulWidget {
   final String verificationId;
@@ -36,10 +36,10 @@ class _PinState extends State<Pin> {
 
         await FirebaseAuth.instance.signInWithCredential(credential);
 
-        // Navigate to the next screen (e.g., Bottombar)
+       
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => const PhoneAuth()),
-          // Replace with your next screen
+          
         );
       } catch (e) {
         setState(() {
@@ -54,7 +54,7 @@ class _PinState extends State<Pin> {
   }
 
   void resendOtp() {
-    // Logic to resend OTP
+    
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text("OTP Resent")),
     );
@@ -132,7 +132,7 @@ class _PinState extends State<Pin> {
                 alignment: Alignment.centerLeft,
                 child: TextButton(
                   onPressed: () {
-                    // Logic to edit phone number
+                    
                   },
                   child: const Text("Edit your phone number?"),
                 ),

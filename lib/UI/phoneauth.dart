@@ -2,7 +2,7 @@ import 'package:country_picker/country_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:taxi_app/verification.dart';
+import 'package:taxi_app/UI/verification.dart';
 
 
 class PhoneAuth extends StatefulWidget {
@@ -40,7 +40,7 @@ class _PhoneAuthState extends State<PhoneAuth> {
     await FirebaseAuth.instance.verifyPhoneNumber(
       phoneNumber: phoneAuth,
       verificationCompleted: (PhoneAuthCredential credential) async {
-        // Auto-retrieval or instant verification cases
+        
         await FirebaseAuth.instance.signInWithCredential(credential);
       },
       verificationFailed: (FirebaseAuthException e) {
@@ -56,7 +56,7 @@ class _PhoneAuthState extends State<PhoneAuth> {
         );
       },
       codeAutoRetrievalTimeout: (String verificationId) {
-        // Optional: handle auto retrieval timeout
+        
       },
     );
   }
