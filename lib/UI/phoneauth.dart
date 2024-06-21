@@ -166,7 +166,10 @@ class _PhoneAuthState extends State<PhoneAuth> {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              onPressed: () => verifyPhoneNumber(context),
+             onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder:(context) =>const Pin(verificationId: '',
+              ) ,
+              ),
+              },
               child: const Text(
                 "Confirm",
                 style: TextStyle(fontSize: 22.03, color: Colors.white),
