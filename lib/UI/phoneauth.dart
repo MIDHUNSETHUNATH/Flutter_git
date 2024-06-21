@@ -160,16 +160,15 @@ class _PhoneAuthState extends State<PhoneAuth> {
               ),
             ),
             ElevatedButton(
+              
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.green,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-             onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder:(context) =>const Pin(verificationId: '',
-              ) ,
-              ),
-              },
+              onPressed: () => verifyPhoneNumber(context),
+            
               child: const Text(
                 "Confirm",
                 style: TextStyle(fontSize: 22.03, color: Colors.white),
