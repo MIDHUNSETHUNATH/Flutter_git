@@ -139,9 +139,7 @@ class _PinState extends State<Pin> {
               ),
               const Gap(15.05),
               ElevatedButton(
-               onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder:(context) =>const MapPage()),
-              );
-              },
+              onPressed: submitPin,
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(Colors.blueAccent),
                 ),
